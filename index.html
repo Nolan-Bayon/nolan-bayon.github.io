@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nolan Bayon Portfolio</title>
 <meta name="description" content="Nolan Bayon, BIM modeleur et architecte d'intérieur. Projets Revit, Rhino, SketchUp, parcours et contact.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22400%20560%201180%20840%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2323304a%22%20stroke-width%3D%2244%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1425%2C1133%201435%2C1174%201429%2C1223%201415%2C1249%201376%2C1277%201331%2C1286%201102%2C1285%201103%2C1075%201345%2C1076%201396%2C1097Z%22/%3E%3Cpath%20d%3D%22M478%2C657%20626%2C656%20954%2C1088%20957%2C655%201356%2C655%201457%2C691%201500%2C727%201531%2C771%201546%2C824%201552%2C908%201535%2C966%201499%2C1025%201551%2C1081%201577%2C1144%201584%2C1224%201560%2C1310%201503%2C1374%201435%2C1407%201374%2C1419%201152%2C1418%201153%2C1371%201407%2C1365%201473%2C1338%201521%2C1281%201536%2C1196%201519%2C1120%201480%2C1069%201409%2C1029%201479%2C970%201497%2C933%201505%2C886%201488%2C794%201466%2C759%201429%2C728%201348%2C704%201005%2C704%201003%2C1226%20607%2C708%20528%2C704%20527%2C1371%20626%2C1370%20627%2C902%20989%2C1371%201101%2C1371%201103%2C1288%201333%2C1288%201376%2C1280%201420%2C1247%201437%2C1197%201425%2C1126%201407%2C1102%201374%2C1082%201333%2C1072%201101%2C1073%201100%2C1368%20991%2C1369%20623%2C888%20624%2C1368%20530%2C1369%20530%2C706%20605%2C710%201006%2C1242%201006%2C708%201346%2C706%201421%2C727%201463%2C760%201483%2C790%201503%2C884%201494%2C934%201477%2C968%201447%2C1000%201400%2C1030%201464%2C1061%201504%2C1099%201524%2C1141%201534%2C1212%201525%2C1263%201508%2C1298%201475%2C1333%201434%2C1355%201356%2C1369%201151%2C1369%201149%2C1419%20964%2C1420%20673%2C1037%20674%2C1418%20479%2C1420Z%22/%3E%3Cpath%20d%3D%22M1102%2C790%201314%2C789%201358%2C802%201385%2C824%201404%2C861%201408%2C899%201394%2C947%201366%2C976%201311%2C993%201103%2C993Z%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Inter:wght@400;500;600&family=Montserrat:wght@400&display=swap" rel="stylesheet">
 <style>
 /* VOICE  occasion, calm and precise: an architect's portfolio, few hues, lots of air
    IDEA   a set of drawing sheets: fine grid paper, hairline rules and a title block (cartouche) , and a project banner that stops on each project
@@ -15,7 +16,7 @@
    COLOUR white paper, graphite ink, Revit selection blue as the one accent; contact band is a full blue field
    TYPE   Archivo 800 for the name and titles, Inter for text
    LAYOUT name across the top with role and buttons at right, band beneath; phone: name, buttons, band */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#111317);--paper:light-dark(#f4f5f7,#181b21);--ink:light-dark(#15171b,#eceef2);--mute:light-dark(#5a606b,#a3a9b4);--line:light-dark(#dfe2e7,#2b3039);--grid:light-dark(rgba(21,23,27,.045),rgba(236,238,242,.05));--acc:light-dark(#2347d9,#8ea4ff);--accbg:light-dark(#2347d9,#1d307f);--on:#fff}
+:root{color-scheme:light dark;--logo:light-dark(#23304a,#c4cee6);--bg:light-dark(#ffffff,#111317);--paper:light-dark(#f4f5f7,#181b21);--ink:light-dark(#15171b,#eceef2);--mute:light-dark(#5a606b,#a3a9b4);--line:light-dark(#dfe2e7,#2b3039);--grid:light-dark(rgba(21,23,27,.045),rgba(236,238,242,.05));--acc:light-dark(#2347d9,#8ea4ff);--accbg:light-dark(#2347d9,#1d307f);--on:#fff}
 :root[data-theme=light]{color-scheme:light}
 :root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
@@ -35,10 +36,24 @@ p{margin:0}
 .btn.pri{background:var(--acc);border-color:var(--acc);color:var(--on)}
 .btn.pri:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;animation:introOut .8s cubic-bezier(.6,0,.3,1) 3.1s forwards;cursor:pointer}
+#intro svg{width:min(560px,82vw);height:auto;overflow:visible}
+#intro .lp{fill:none;stroke:var(--logo);stroke-width:8;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s cubic-bezier(.45,0,.2,1) .55s forwards}
+#intro .cl{stroke:var(--ink);stroke-width:2.5;opacity:.7;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards}
+#intro .cl line:nth-child(2n){animation-delay:.12s}
+#intro .cl line:nth-child(3n){animation-delay:.24s}
+#intro text{font:400 150px Montserrat,Inter,sans-serif;fill:var(--logo);opacity:0;animation:rise .7s ease-out 1.9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes introOut{to{opacity:0;visibility:hidden;transform:scale(1.04)}}
+#intro.skip{animation:introOut .4s ease forwards}
+@media(prefers-reduced-motion:reduce){#intro .lp,#intro .cl{stroke-dashoffset:0;animation:none}#intro text{opacity:1;animation:none}#intro{animation:introOut .4s ease 1.2s forwards}}
+.mark{width:40px;height:29px;flex:none;fill:none;stroke:var(--logo);stroke-width:24;stroke-linejoin:round}
 /* header */
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:24px;min-height:64px;padding-inline:max(5vw,16px);max-width:calc(1240px + 10vw);margin:0 auto}
-.logo{font:800 17px Archivo,sans-serif;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.logo{display:flex;align-items:center;gap:10px;font:800 17px Archivo,sans-serif;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
 nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 nav a{flex:none;padding:10px 12px;text-decoration:none;font-size:15px;color:var(--mute)}
 nav a:hover{color:var(--ink)}
@@ -216,9 +231,10 @@ dialog::backdrop{background:#0b0c0f}
 </style>
 </head>
 <body>
+<div id="intro" aria-hidden="true"><svg viewBox="180 420 1580 1220"><g class="cl"><line pathLength="1" x1="278" y1="617" x2="1567" y2="611"/><line pathLength="1" x1="310" y1="1341" x2="747" y2="1339"/><line pathLength="1" x1="840" y1="1342" x2="1656" y2="1340"/><line pathLength="1" x1="445" y1="520" x2="445" y2="1443"/><line pathLength="1" x1="900" y1="500" x2="900" y2="1030"/><line pathLength="1" x1="637" y1="1340" x2="637" y2="1450"/><line pathLength="1" x1="500" y1="493" x2="900" y2="1030"/><line pathLength="1" x1="910" y1="1338" x2="992" y2="1450"/><line pathLength="1" x1="1407" y1="442" x2="1555" y2="1458"/></g><g class="lp"><path pathLength="1" d="M1425,1133 1435,1174 1435,1195 1429,1223 1415,1249 1398,1265 1376,1277 1355,1283 1331,1286 1102,1285 1103,1075 1330,1074 1345,1076 1374,1085 1396,1097 1412,1112Z"/><path pathLength="1" d="M478,657 626,656 941,1073 953,1082 954,1088 956,1088 957,655 1356,655 1359,658 1385,662 1418,672 1457,691 1483,710 1500,727 1531,771 1546,824 1553,874 1552,908 1544,941 1535,966 1521,992 1502,1016 1499,1025 1529,1052 1551,1081 1568,1115 1577,1144 1584,1185 1584,1224 1576,1269 1560,1310 1537,1343 1503,1374 1477,1390 1435,1407 1400,1414 1393,1418 1374,1419 1152,1418 1153,1371 1359,1371 1407,1365 1444,1354 1473,1338 1502,1311 1521,1281 1533,1239 1536,1196 1531,1158 1519,1120 1504,1094 1480,1069 1451,1050 1413,1033 1409,1029 1455,997 1479,970 1497,933 1505,886 1505,862 1502,842 1488,794 1466,759 1450,743 1429,728 1392,712 1348,704 1005,704 1003,1226 996,1222 607,708 602,704 528,704 527,1371 626,1370 627,902 632,903 638,909 929,1295 989,1371 1101,1371 1103,1288 1333,1288 1376,1280 1400,1267 1420,1247 1431,1225 1437,1197 1435,1159 1425,1126 1407,1102 1392,1091 1374,1082 1348,1074 1333,1072 1101,1073 1100,1368 991,1369 636,902 627,898 626,889 623,888 625,895 624,1368 530,1369 530,706 600,706 605,710 996,1226 1003,1229 1006,1242 1008,1242 1005,1229 1006,708 1008,706 1346,706 1390,714 1421,727 1443,741 1463,760 1483,790 1498,834 1503,864 1503,884 1494,934 1477,968 1447,1000 1409,1023 1406,1028 1400,1028 1400,1030 1406,1030 1410,1035 1429,1042 1464,1061 1481,1074 1504,1099 1524,1141 1533,1184 1534,1212 1525,1263 1508,1298 1500,1309 1475,1333 1458,1344 1434,1355 1394,1365 1356,1369 1151,1369 1149,1419 964,1420 686,1051 677,1047 675,1037 673,1037 675,1047 674,1418 672,1420 479,1420 477,1399Z"/><path pathLength="1" d="M1102,790 1314,789 1334,792 1358,802 1373,812 1385,824 1397,842 1404,861 1408,899 1403,927 1394,947 1387,957 1366,976 1345,986 1311,993 1103,993Z"/></g><text x="200" y="1590" textLength="1530" lengthAdjust="spacingAndGlyphs">ARCHITECTE &amp; BIM</text></svg></div>
 <header>
  <div class="bar">
-  <a class="logo" href="#top">Nolan Bayon</a>
+  <a class="logo" href="#top"><svg class="mark" viewBox="400 560 1180 840" aria-hidden="true"><path d="M1425,1133 1435,1174 1429,1223 1415,1249 1376,1277 1331,1286 1102,1285 1103,1075 1345,1076 1396,1097Z"/><path d="M478,657 626,656 954,1088 957,655 1356,655 1457,691 1500,727 1531,771 1546,824 1552,908 1535,966 1499,1025 1551,1081 1577,1144 1584,1224 1560,1310 1503,1374 1435,1407 1374,1419 1152,1418 1153,1371 1407,1365 1473,1338 1521,1281 1536,1196 1519,1120 1480,1069 1409,1029 1479,970 1497,933 1505,886 1488,794 1466,759 1429,728 1348,704 1005,704 1003,1226 607,708 528,704 527,1371 626,1370 627,902 989,1371 1101,1371 1103,1288 1333,1288 1376,1280 1420,1247 1437,1197 1425,1126 1407,1102 1374,1082 1333,1072 1101,1073 1100,1368 991,1369 623,888 624,1368 530,1369 530,706 605,710 1006,1242 1006,708 1346,706 1421,727 1463,760 1483,790 1503,884 1494,934 1477,968 1447,1000 1400,1030 1464,1061 1504,1099 1524,1141 1534,1212 1525,1263 1508,1298 1475,1333 1434,1355 1356,1369 1151,1369 1149,1419 964,1420 673,1037 674,1418 479,1420Z"/><path d="M1102,790 1314,789 1358,802 1385,824 1404,861 1408,899 1394,947 1366,976 1311,993 1103,993Z"/></svg>Nolan Bayon</a>
   <nav aria-label="Sections">
    <a href="#parcours" data-t="nav_about">Parcours</a>
    <a href="#projets" data-t="nav_projects">Projets</a>
@@ -313,9 +329,8 @@ dialog::backdrop{background:#0b0c0f}
   </div>
   <dl class="cl">
    <div><dt data-t="c_email">Email</dt><dd><a href="mailto:nolan.bayon.bim@gmail.com">nolan.bayon.bim@gmail.com</a></dd></div>
-   <div><dt data-t="c_phone">Téléphone</dt><dd><a href="tel:+33781667257">+33 7 81 66 72 57</a></dd></div>
    <div><dt data-t="c_linkedin">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nolan-bayon/" target="_blank" rel="noopener">linkedin.com/in/nolan-bayon</a></dd></div>
-   <div><dt data-t="c_location">Localisation</dt><dd>Villeneuve-le-Roi (94), Île-de-France</dd></div>
+   <div><dt data-t="c_location">Localisation</dt><dd>Île-de-France</dd></div>
   </dl>
  </div>
 </section>
@@ -500,6 +515,11 @@ document.addEventListener('click',ev=>{
  new ResizeObserver(()=>{tr.scrollLeft=hi*tr.clientWidth}).observe(tr);
  start();
 }
+/* intro */
+{const it=$('intro');let seen=false;try{seen=sessionStorage.getItem('nb-intro')==='1';sessionStorage.setItem('nb-intro','1')}catch(e){}
+ if(seen||location.hash.startsWith('#projet-'))it.remove();
+ else{it.addEventListener('click',()=>it.classList.add('skip'));addEventListener('keydown',()=>it.classList.add('skip'),{once:true});
+  it.addEventListener('animationend',e=>{if(e.target===it&&e.animationName==='introOut')it.remove()})}}
 /* deep link */
 {const h=location.hash.slice(1);const i=P.findIndex(p=>slug(p)===h);if(i>-1)openP(i)}
 /* copy email */
