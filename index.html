@@ -2,10 +2,18 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nolan Bayon Portfolio</title>
 <meta name="description" content="Nolan Bayon, BIM modeleur et architecte d'intérieur. Projets Revit, Rhino, SketchUp, parcours et contact.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22400%20560%201180%20840%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2323304a%22%20stroke-width%3D%2244%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1425%2C1133%201435%2C1174%201429%2C1223%201415%2C1249%201376%2C1277%201331%2C1286%201102%2C1285%201103%2C1075%201345%2C1076%201396%2C1097Z%22/%3E%3Cpath%20d%3D%22M478%2C657%20626%2C656%20954%2C1088%20957%2C655%201356%2C655%201457%2C691%201500%2C727%201531%2C771%201546%2C824%201552%2C908%201535%2C966%201499%2C1025%201551%2C1081%201577%2C1144%201584%2C1224%201560%2C1310%201503%2C1374%201435%2C1407%201374%2C1419%201152%2C1418%201153%2C1371%201407%2C1365%201473%2C1338%201521%2C1281%201536%2C1196%201519%2C1120%201480%2C1069%201409%2C1029%201479%2C970%201497%2C933%201505%2C886%201488%2C794%201466%2C759%201429%2C728%201348%2C704%201005%2C704%201003%2C1226%20607%2C708%20528%2C704%20527%2C1371%20626%2C1370%20627%2C902%20989%2C1371%201101%2C1371%201103%2C1288%201333%2C1288%201376%2C1280%201420%2C1247%201437%2C1197%201425%2C1126%201407%2C1102%201374%2C1082%201333%2C1072%201101%2C1073%201100%2C1368%20991%2C1369%20623%2C888%20624%2C1368%20530%2C1369%20530%2C706%20605%2C710%201006%2C1242%201006%2C708%201346%2C706%201421%2C727%201463%2C760%201483%2C790%201503%2C884%201494%2C934%201477%2C968%201447%2C1000%201400%2C1030%201464%2C1061%201504%2C1099%201524%2C1141%201534%2C1212%201525%2C1263%201508%2C1298%201475%2C1333%201434%2C1355%201356%2C1369%201151%2C1369%201149%2C1419%20964%2C1420%20673%2C1037%20674%2C1418%20479%2C1420Z%22/%3E%3Cpath%20d%3D%22M1102%2C790%201314%2C789%201358%2C802%201385%2C824%201404%2C861%201408%2C899%201394%2C947%201366%2C976%201311%2C993%201103%2C993Z%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nolan Bayon">
+<link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Inter:wght@400;500;600&family=Montserrat:wght@400&display=swap" rel="stylesheet">
@@ -56,7 +64,7 @@ p{margin:0}
 #intro .hint{position:absolute;bottom:clamp(24px,6vh,56px);left:0;right:0;text-align:center;font-size:14px;color:var(--mute);opacity:0;animation:rise .6s ease 2.3s forwards}
 .mark{width:40px;height:29px;flex:none;fill:none;stroke:var(--logo);stroke-width:24;stroke-linejoin:round}
 /* header */
-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;padding-top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:24px;min-height:64px;padding-inline:max(5vw,16px);max-width:calc(1240px + 10vw);margin:0 auto}
 .logo{display:flex;align-items:center;gap:10px;font:800 17px Archivo,sans-serif;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
 nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
@@ -479,7 +487,7 @@ function openP(i){cur=i;hold=0;fillP();pd.querySelector('.pbody').scrollTop=0;
  if(!pd.open){pd.showModal?pd.showModal():pd.setAttribute('open','')}
  gal.go(0,false);startAuto();try{history.replaceState(null,'','#'+slug(P[i]))}catch(e){}}
 $('pdx').addEventListener('click',()=>pd.close());
-pd.addEventListener('close',()=>{stopAuto();const c=cur;cur=-1;try{history.replaceState(null,'','#projets')}catch(e){};const b=document.querySelector(`[data-p="${c}"]`);if(b)b.focus({preventScroll:true})});
+pd.addEventListener('close',()=>{stopAuto();const c=cur;cur=-1;try{history.replaceState(null,'',location.pathname+location.search)}catch(e){};const b=document.querySelector(`[data-p="${c}"]`);if(b)b.focus({preventScroll:true})});
 pd.addEventListener('keydown',e=>{if(!lb.open&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){stopAuto();gal.key(e)}});
 $('pdnext').addEventListener('click',()=>openP((cur+1)%P.length));
 $('pdt').addEventListener('click',e=>{const b=e.target.closest('[data-ti]');if(b){stopAuto();gal.go(+b.dataset.ti)}});
@@ -533,8 +541,11 @@ document.addEventListener('click',ev=>{
 /* intro */
 {const it=$('intro');let seen=false;try{seen=sessionStorage.getItem('nb-intro')==='1';sessionStorage.setItem('nb-intro','1')}catch(e){}
  if(seen||location.hash.startsWith('#projet-'))it.remove();
- else{it.addEventListener('click',()=>it.classList.add('skip'));addEventListener('keydown',()=>it.classList.add('skip'),{once:true});
-  it.addEventListener('animationend',e=>{if(e.target===it&&e.animationName==='introOut')it.remove()})}}
+ else{try{history.scrollRestoration='manual'}catch(e){}
+  if(location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
+  const top=()=>scrollTo({top:0,left:0,behavior:'instant'});top();addEventListener('load',top,{once:true});it._top=top;
+  it.addEventListener('click',()=>it.classList.add('skip'));addEventListener('keydown',()=>it.classList.add('skip'),{once:true});
+  it.addEventListener('animationend',e=>{if(e.target===it&&e.animationName==='introOut'){it._top&&it._top();it.remove()}})}}
 /* deep link */
 {const h=location.hash.slice(1);const i=P.findIndex(p=>slug(p)===h);if(i>-1)openP(i)}
 /* copy email */
